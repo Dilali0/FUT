@@ -1,0 +1,403 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --header-bg: #040404;
+    --text-color: #FAFAFA;
+    --button-bg: #55CCA2;
+    --form-bg: #2B2A2A;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: #121212;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+header img {
+    width: 40px;
+}
+header nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+}
+header #sign-in-btn {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    padding: 5px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Main Section */
+#main-container {
+    position: relative;
+    padding: 20px;
+    background-image: url("../img/stadium_background.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+#main-container::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 6, 6, 0.783); 
+    z-index: 1;
+}
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Content Section */
+main{
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+}
+
+.content-container {
+    display: grid;
+    grid-template-rows: 1fr 500px;
+    gap: 20px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+/* Stadium Section */
+
+.stadium-section{
+    display: grid;
+    align-items: start;
+}
+.stadium-section .field {
+    display: flex;
+    /* transform: scale(0.8) translateY(-90px); */
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 10px 5px;
+    position: relative;
+    width: 100%; 
+    margin: auto auto;
+    height: 700px; 
+}
+.stadium-section .field-image {
+    width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+.player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+}
+.player .card-body-img{
+    width :120px ;
+    height:160px ;
+}
+#manager .card-body-img{
+    width :100px ;
+    height:130px ;
+}
+.player .body-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.player .body-card .spanbtn{
+    position: absolute  ;
+    display: flex;
+    align-items: center;
+    color :aqua ;
+    right: 0;
+    left: 0 ;
+    top : 60px ;
+    justify-content: center;
+}
+#manager .body-card .spanbtn{
+    position: absolute  ;
+    display: flex;
+    align-items: center;
+    color :aqua ;
+    right: 0;
+    left: 0 ;
+    top : 50px ;
+    justify-content: center;
+}
+
+.player .body-card .spanbtn button{
+ z-index: 1;
+   background: transparent;
+    border: none;
+    position: absolute;
+    color: aqua;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+h4{
+    position: absolute;
+    margin-top: 4px;
+    right: 0;
+    left: 0 ;
+    top : 90px ;
+    text-align: center;
+    font-size: 12px;
+
+}
+.position{
+    position: relative;
+}
+.position img{
+    height: 30px;
+    width: fit-content;
+}
+.position p{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 4px;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+
+}
+
+.players-changement{
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+    
+}
+.players-changement .player{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+
+/* Player Section */
+.player-section {
+    z-index: 2;
+}
+
+.player-section .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.player-section .remove-btn {
+    background-color: var(--header-bg);
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+.player-section #formation-select {
+    background-color: var(--form-bg);
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add Player Form */
+    /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.add-player-form {
+    width: 100%;
+    background-color: var(--form-bg);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.add-player-form .form-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.add-player-form .form-header h3 {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.add-player-form form {
+    display: grid;
+    gap: 10px;
+}
+
+.add-player-form .form-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.add-player-form .form-group input {
+    flex: 1;
+    min-width: calc(50% - 10px);
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    outline: none;
+}
+
+.add-player-form .form-group input::placeholder {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.add-player-form .ratings-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.add-player-form .ratings-container input {
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    outline: none;
+}
+
+.add-player-form .ratings-container input::placeholder {
+    font-size: 10px;
+}
+
+.add-player-form .form-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.add-player-form .form-footer .submit-btn {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-player-form .form-footer .submit-btn:hover {
+    background-color: #3da885;
+}
+
+/* Position 4 3 3 */
+
+#manager {
+    position:absolute;
+    top: 0%;
+    left: 0%;
+  }
+  #player1 {
+    position:absolute;
+    top: 2%;
+    left: 15.5%;
+  }
+  #player2 {
+    position:absolute;
+    top: 1%;
+    left: 45%;
+  }
+  #player3 {
+    position:absolute;
+    top: 2%;
+    left: 75.5%;
+  }
+  #player4 {
+    position:absolute;
+    top: 32%;
+    left: 20.5%;
+  }
+  #player5 {
+    position:absolute;
+    top: 34%;
+    left: 45%;
+  }
+  #player6 {
+    position:absolute;
+    top: 32%;
+    left: 70.5%;
+  }
+  #player7 {
+    position:absolute;
+    top: 58%;
+    left: 7.5%;
+  }
+  #player8 {
+    position:absolute;
+    top: 62%;
+    left: 25.5%;
+  }
+  #player9 {
+    position:absolute;
+    top: 58%;
+    left: 80.5%;
+  }
+  #player10 {
+    position:absolute;
+    top: 62%;
+    left: 60.5%;
+  }
+  #player11 {
+    position:absolute;
+    left: 45%;
+    top: 75%;
+  }
