@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .player-card {
+    width: 200px;
+    height: 300px;
+    background: linear-gradient(180deg, #f0c75e, #d49d3c);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #000;
+}
+
+.rating {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rating .overall {
+    font-size: 24px;
+}
+
+.rating .position {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.image-container {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.image-container .player-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stat {
+    width: 45%;
+    text-align: center;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="player-card">
+        <div class="rating">
+            <p class="overall">90</p>
+            <p class="position">CF</p>
+        </div>
+        <div class="image-container">
+            <img src="https://cdn.sofifa.net/players/158/023/25_120.png" alt="Player Image" class="player-image">
+        </div>
+        <div class="player-name">
+            Messi
+        </div>
+        <div class="stats">
+            <div class="stat"><span>PAC</span><p>80</p></div>
+            <div class="stat"><span>SHO</span><p>87</p></div>
+            <div class="stat"><span>PAS</span><p>90</p></div>
+            <div class="stat"><span>DRI</span><p>94</p></div>
+            <div class="stat"><span>DIF</span><p>33</p></div>
+            <div class="stat"><span>PHY</span><p>64</p></div>
+        </div>
+    </div>    
+</body>
+</html>
