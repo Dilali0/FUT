@@ -6,44 +6,47 @@
     box-sizing: border-box;
 }
 :root {
+    --nexcolcor : #55CCA2 ;
     --header-bg: #040404;
     --text-color: #FAFAFA;
-    --button-bg: #55CCA2;
+    --button-bg: #373c3a;
     --form-bg: #2B2A2A;
-}
+        --headear-bg : #262d33 ;
 
+        --input-bg : #495057 ;
+        --body-bg : #000000 ;
+        --btncolor : #2B2A2A ;
+        --yellow : #ffd900 ;
+        --text-color :  #FFFFFF ;
+        --active-bg : #348fe2 ;
+        --today-btn : #348fe2 ; 
+        --icon-color :  #adb5bd ;
+        --title-color : #DEE2E6 ;
+    
+}
 body {
     font-family: 'Poppins', sans-serif;
     color: var(--text-color);
-    background-color: #121212;
+    background-color: var(--header-bg);
 }
-
 /* Header */
 header {
     background-color: var(--header-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px;
 }
 header img {
     width: 40px;
 }
-header nav ul {
-    display: flex;
-    gap: 15px;
-    list-style: none;
-}
-header nav ul li a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 16px;
-}
+
 header #sign-in-btn {
-    background-color: var(--button-bg);
-    color: var(--text-color);
+    background-color: var(--nexcolcor);
+    color: var(--btncolor);
     padding: 5px 15px;
     border: none;
+    font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -64,12 +67,12 @@ header #sign-in-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(6, 6, 6, 0.783); 
+    background-color: rgba(32, 30, 30, 0.87); 
     z-index: 1;
 }
 .page-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     z-index: 2;
     position: relative;
@@ -78,7 +81,8 @@ header #sign-in-btn {
 /* Content Section */
 main{
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 73% 27% ;
+    margin-right: 80px;
     gap: 20px;
 }
 
@@ -89,6 +93,7 @@ main{
     align-items: start;
     position: relative;
     z-index: 2;
+    justify-content: center;
 }
 
 /* Stadium Section */
@@ -96,7 +101,7 @@ main{
 .stadium-section{
     display: grid;
     align-items: start;
-    transform: scale(0.8)  ; 
+    transform: scale(0.9)  ; 
 }
 .stadium-section .field {
     display: flex;
@@ -104,10 +109,18 @@ main{
     /* align-items: center; */
     padding: 10px 5px;
     position: relative;
-    width: 100%; 
+    width: 935px; 
+    /* width: 840px;  */
     margin: auto auto;
     height: 700px; 
-    
+    scale: 0.8;
+}
+.stadium-section .field-image {
+    width: 100%; 
+    max-height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
 }
 .stadium-section .field-image {
     width: 100%; 
@@ -123,6 +136,18 @@ main{
     position: absolute;
     z-index: 10;
 }
+.HoverStyle{
+    background-color: aqua;
+    display: none;
+    height: 120px;
+    width: 100Px;
+    position: absolute;
+    top: 43%;
+    transform: translateY(-50%);
+    /* z-index: 55; */
+    box-shadow:0px 0px 50px aqua;
+}
+
 .card-body-img{
     width :120px ;
     height:160px ;
@@ -201,14 +226,15 @@ h4{
     animation: animation_Popoup .7s;
     position: absolute;
     inset: 10px;
-    backdrop-filter: blur(2);
-    background-color: rgb(46, 46, 46);
+    background-color: #1E1E1E;
     height: 700px;
+    justify-self: center;
+    width: 80%;
 }
 .fetch-cards{
     width: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     /* margin: 30px; */
     gap: 20px;
     padding: 10px;
@@ -217,7 +243,6 @@ h4{
     height:100%;
 }
  .player-from{
-   
     width: fit-content;
     position: relative;
     height: fit-contentyt;
@@ -267,12 +292,31 @@ h4{
     display: flex;
     justify-content: center;
     gap: 7px;
-
 }
 .flags img{
     height: 100%;
+}
+.mise-ajour{
+    position: absolute;
+    height: 50PX;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #726f6f;
+    padding: 4px;
+    border-radius: 8px;
 
-    
+}
+.Delete{
+       color: red;
+       background-color: transparent;
+       border: none;
+}
+.Update{
+       color: white ;
+       background-color: transparent;
+       border: none;
 }
 
 .players-changement{
@@ -292,211 +336,223 @@ h4{
     z-index: 3;
 }
 
+
+
 /* Player Section */
 .player-section {
     z-index: 2;
 }
 
+/* Action Buttons */
 .player-section .actions {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
 }
+
 .player-section .remove-btn {
     background-color: var(--header-bg);
     color: var(--text-color);
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
+
 .player-section #formation-select {
-    background-color: var(--form-bg);
+    background-color: #1E1E1E;
     color: var(--text-color);
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
-/* Add Player Form */
-    /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+/* Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+    /* height: fit-content; */
 }
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
-.add-player-form {
-    width: 100%;
-    background-color: var(--form-bg);
-    padding: 15px;
+
+/* General Form Card Styling */
+.form-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    max-width: fit-content;
+    margin: 0 auto;
+    background-color: #1E1E1E;
+   
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#formulair{
     display: none;
 }
-
-.CloseBtn{
-    float: right;
-    background-color: transparent;
-    border-radius:50% ;
-    /* color: rgb(110, 0, 0); */
-    padding: 10px;
-    border:none;
-    font-size: larger;
-    color: #55CCA2;
-}
-
-
-.add-player-form .form-header {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.add-player-form .form-header h3 {
-    color: var(--text-color);
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.add-player-form form {
-    display: grid;
-    gap: 10px;
-}
-
-.add-player-form .form-group {
+/* File Upload Section */
+/* File Upload Section */
+.file-upload {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.add-player-form .form-group input {
-    flex: 1;
-    min-width: calc(50% - 10px);
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    outline: none;
-}
-
-.add-player-form .form-group input::placeholder {
-    font-size: 12px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.add-player-form .ratings-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    align-items: center;
     justify-content: space-between;
 }
 
-.add-player-form .ratings-container input {
-    width: 42px;
-    height: 42px;
-    text-align: center;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--text-color);
-    outline: none;
+.file-upload input[type="file"] {
+    display: none;
 }
 
-.add-player-form .ratings-container input::placeholder {
-    font-size: 10px;
-}
-
-.add-player-form .form-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.add-player-form .form-footer .submit-btn {
-    background-color: var(--button-bg);
-    color: var(--text-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
+.file-upload label {
     cursor: pointer;
+    background-color: var(--nexcolcor);
+    color: var(--btncolor);
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.add-player-form .form-footer .submit-btn:hover {
-    background-color: #3da885;
+.file-upload label:hover {
+    background-color: #147a80;
 }
 
-/* Position 4 3 3 */
+.file-upload img {
+    width: 60px;
+    height: 56px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-#manager {
-    position:absolute;
-    top: 0%;
-    left: 0%;
-  }
-  #player1 {
-    position:absolute;
-    top: 2%;
-    left: 15.5%;
-  }
-  #player2 {
-    position:absolute;
-    top: 1%;
-    left: 45%;
-  }
-  #player3 {
-    position:absolute;
-    top: 2%;
-    left: 75.5%;
-  }
-  #player4 {
-    position:absolute;
-    top: 32%;
-    left: 20.5%;
-  }
-  #player5 {
-    position:absolute;
-    top: 34%;
-    left: 45%;
-  }
-  #player6 {
-    position:absolute;
-    top: 32%;
-    left: 70.5%;
-  }
-  #player7 {
-    position:absolute;
-    top: 58%;
-    left: 7.5%;
-  }
-  #player8 {
-    position:absolute;
-    top: 62%;
-    left: 25.5%;
-  }
-  #player9 {
-    position:absolute;
-    top: 58%;
-    left: 80.5%;
-  }
-  #player10 {
-    position:absolute;
-    top: 62%;
-    left: 60.5%;
-  }
-  #player11 {
-    position:absolute;
-    left: 45%;
-    top: 75%;
-  }
+/* Name and Position Section */
+.name-pose {
+    display: flex;
+    gap: 1rem;
+}
+.name-pose input{
+    width: 5px;
+    height: 5px ;
+}
+
+.name-insert input,
+.Pos input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.name-insert input:focus,
+.Pos input:focus {
+    border-color: #1b9fae;
+    outline: none;
+    box-shadow: 0 0 6px rgba(27, 159, 174, 0.5);
+}
+
+/* Dropdown Sections */
+.All-select {
+    display: grid;
+    grid-template-columns:  1fr 1fr ;
+    gap: 1rem;
+}
+.All-select:last-child div{
+    grid-row: 2 span;
+}
+.select {
+    flex: 1;
+}
+
+.select label {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 6px;
+    display: block;
+}
+
+
+/* Range Inputs */
+.all-ranges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+
+} 
+.show{
+    display: none;
+}
+
+
+.range-field {
+    flex: 1 1 calc(50% - 1rem);
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.range-field label {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.range-field input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: var(--button-bg);
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.range-field input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--icon-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-field input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Submit Button */
+
+/* Button Styling */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: var(--nexcolcor);
+    color: var(--header-bg);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--today-btn);
+}
+
+
   @keyframes animation_Popoup {
     0%{
         transform: scale(0);
@@ -508,7 +564,84 @@ input[type=number] {
     }
   }
 
-
   .playerCH{
     position: relative;
   }
+
+
+  .CloseBtn{
+    float: right;
+    background-color: transparent;
+    border-radius:50% ;
+    /* color: rgb(110, 0, 0); */
+    padding: 10px;
+    border:none;
+    font-size: larger;
+    color: #55CCA2;
+}
+
+
+.custom-option{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 7px;
+}
+.custom-option img{
+    height: 20px;
+}
+.custom-option span{
+    font-size: 8px;
+}
+
+  
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(.33);
+    }
+    80%, 100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse-dot {
+    0% {
+      transform: scale(.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(.8);
+    }
+  }
+
+.player:hover .HoverStyle{
+    display: flex;
+}
+
+#changement{
+    width: 935px;
+}
+
+@media screen and (max-width: 1143px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        gap: 20px;
+    }
+    .player-section{
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+    form{
+        max-width: 500px;
+
+    }
+    
+  }
+#physical{
+    width: 50%;
+}

@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Squad Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.1/dist/css/tom-select.default.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./assets/css/all.css">
     <link rel="stylesheet" href="./assets/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/plan.css">
 </head>
 <body>
     <header>
         <img src="/assets/img/logo.webp" alt="logo">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Squad</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+       
+          <h3 class="page-title">EA FC 25 Squad Builder</h3>
+          
         <button id="sign-in-btn">Sign In</button>
     </header>
     <section id="main-container">
-        <h1 class="page-title">EA FC 25 Squad Builder</h1>
         <main>
           <div class="content-container">
             <div class="stadium-section" style="position: relative;">
-              <div class="field field-443  ">
+              <div id="field" class="field formation-433 ">
                       <img src="./assets/img/field-bg.png" alt="Field" class="field-image" >
-                      <div  id="player1" class="player">
+                      <div id="player1" isempty="true" class="player playerPrincip ">
+                          <div class="HoverStyle"></div>
                           <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img" >
                            <div class="spanbtn">
@@ -41,10 +39,12 @@
                           </div>
                           <div class="position">
                             <img src="./assets/img/pos_base.png" alt="">
-                            <p class="PPS">LW</p>
+                             <p  class="PPS">LW</p>
                           </div>
+
                       </div> 
-                      <div  id="player2" class="player">
+                      <div  id="player2" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img" >
                            <div class="spanbtn">
@@ -60,7 +60,8 @@
                             <p class="PPS">ST</p>
                           </div>
                       </div> 
-                      <div  id="player3" class="player">
+                      <div  id="player3" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -76,7 +77,8 @@
                             <p class="PPS">RW</p>
                           </div>
                       </div> 
-                      <div  id="player4" class="player">
+                      <div  id="player4" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -92,7 +94,8 @@
                             <p class="PPS">CM</p>
                           </div>
                       </div> 
-                      <div  id="player5" class="player">
+                      <div  id="player5" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -108,7 +111,8 @@
                             <p class="PPS">CM</p>
                           </div>
                       </div> 
-                      <div  id="player6" class="player">
+                      <div  id="player6" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -124,7 +128,8 @@
                             <p class="PPS">CM</p>
                           </div>
                       </div> 
-                      <div  id="player7" class="player">
+                      <div  id="player7" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -140,7 +145,8 @@
                             <p class="PPS">LB</p>
                           </div>
                       </div> 
-                      <div  id="player8" class="player">
+                      <div  id="player8" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -156,7 +162,8 @@
                             <p class="PPS">CB</p>
                           </div>
                       </div> 
-                      <div  id="player9" class="player">
+                      <div  id="player9" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -172,7 +179,8 @@
                             <p class="PPS">CB</p>
                           </div>
                       </div> 
-                      <div id="player10" class=" player">
+                      <div id="player10" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -188,7 +196,8 @@
                             <p class="PPS">RB</p>
                           </div>
                       </div> 
-                      <div id="player11" class=" player">
+                      <div id="player11" isempty="true" class="player playerPrincip">
+                        <div class="HoverStyle"></div>
                         <div class="body-card">
                           <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                            <div class="spanbtn">
@@ -207,13 +216,15 @@
                       
               </div> 
               <div id="cards" isOpened="false" class="all-cards ">
-                <button class="CloseBtn" onclick="sed()"><i class="fa-solid fa-xmark"></i></button>
-                <div id="players" class="fetch-cards">
-                </div> 
+                 <button class="CloseBtn" onclick="sed()">
+                  <i class="fa-solid fa-xmark"></i></button>
+                  <div id="players" class="fetch-cards">
+                  </div> 
               </div> 
               </div>
-              <div id="changement" class="players-changement" style="background-color: rgb(50, 50, 50);">
-                <div  class="player playerCH">
+              <div id="changement" class="players-changement" >
+                <div id="playerch1"  isempty="true" class="player playerCH">
+                  
                   <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img" >
                    <div class="spanbtn">
@@ -229,7 +240,8 @@
                     <p class="PPS">LW</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch2" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img" >
                    <div class="spanbtn">
@@ -245,7 +257,8 @@
                     <p class="PPS">ST</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch3" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -261,7 +274,7 @@
                     <p class="PPS">RW</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch4" isempty="true"  class="player playerCH">
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -277,7 +290,8 @@
                     <p class="PPS">CM</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch5" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -293,7 +307,8 @@
                     <p class="PPS">CM</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch6" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -309,7 +324,8 @@
                     <p class="PPS">CM</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch7" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -325,7 +341,8 @@
                     <p class="PPS">LB</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch8" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -341,7 +358,8 @@
                     <p class="PPS">CB</p>
                   </div>
               </div> 
-              <div  class="player playerCH">
+              <div id="playerch9" isempty="true"  class="player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -357,7 +375,8 @@
                     <p class="PPS">CB</p>
                   </div>
               </div> 
-              <div  class=" player playerCH">
+              <div id="playerch10" isempty="true" class=" player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -373,7 +392,8 @@
                     <p class="PPS">RB</p>
                   </div>
               </div> 
-              <div  class=" player playerCH">
+              <div id="playerch11" isempty="true"  class=" player playerCH">
+                
                 <div class="body-card">
                   <img src="./assets/img/placeholder-card-normal.webp" alt="bodycard" class="card-body-img">
                    <div class="spanbtn">
@@ -389,65 +409,133 @@
                     <p class="PPS">GK</p>
                   </div>
               </div>
-              
               </div> 
           </div>
            
           </div>
           <div class="player-section">
+            <form action="">
               <div class="actions">
-                  <button type="button" class="remove-btn">Remove All Players</button>
                   <select name="formation" id="formation-select">
                       <option value="4-3-3">4-3-3</option>
                       <option value="4-4-2">4-4-2</option>
                   </select>
               </div>
-              <div id="formulair" class="add-player-form">
-                <form id="player-form">
-                    <div class="form-header">
-                        <h3>Add Player</h3>
+              <div id="formulair" class="form-container" >
+                       <div class="form-card">
+                           <div class="file-upload">
+                        <div class="design-input">
+                         <label for="photo">Upload Photo</label>
+                        <input id="photo" type="file" accept="image/*"> 
+                        </div>
+                        <img src="./assets/img/user-icon-1024x1024-unb6q333.png" alt="Preview" id="face">
+                           </div>
+
+                           <div class="name-pose"> 
+                        <div class="name-insert">
+                          <label for="name">Name:</label>
+                          <input type="text" id="name" class="input-text" placeholder="Enter name"  />
+                       </div>
+                      <div class="Pos"> 
+                            <label for="position">Position:</label>
+                           <input disabled readonly type="text" id="position"  class="input-select"   >
+                     </div>
+                           </div>
+                     
+                       <div class= "All-select">
+                       <div class="select">
+                        <label for="flag">Nationality :</label>
+                        <select style="background-color:#495057;"  id="flag" class="input-select"></select>
+                      </div>  
+                      <div class="select">
+                        <label for="club">Club:</label>
+                        <select style="background-color:#495057;"  id="club" class="input-select"></select>
+                        </div> 
+                        <div id="coverseelct"  class="select">
+                          <label for="cover">Cover:</label>
+                          <select  id="CoverCombo" class="input-select"> </select>
+                        </div> 
+                        </div>
+
+                        <div id="pl" class="all-ranges   ">
+                      <div class="range-field">
+                            <label for="rating">Rating ( <span class="progressValues">50</span> )</label>
+                          <input type="range" id="progressValue" min="10" max="99" value="" class="input-range">
                     </div>
-            
-                    <div class="form-group">
-                        <input type="text" id="player-name" name="player-name" placeholder="Player Name" >
-                        <input type="url" id="player-photo" name="player-photo" placeholder="Player Photo URL" >
+                    <div class="range-field">
+                      <label for="pace">Pace ( <span class="progressValues">50</span> )</label>
+                      <input type="range" id="pace" min="0" max="100" value="" class="input-range">
+                  </div>
+                   <div class="range-field">
+                    <label for="shooting">Shooting ( <span class="progressValues">50</span> )</label>
+                    <input type="range" id="shooting" min="0" max="100" value="" class="input-range">
+                  </div>  
+                  <div class="range-field">
+                    <label for="passing">Passing ( <span class="progressValues">50</span> )</label>
+                    <input type="range" id="passing" min="0" max="100" value="" class="input-range">
+                 </div>
+                 <div class="range-field">
+                  <label for="dribbling">Dribbling ( <span class="progressValues">50</span> )</label>
+                 <input type="range" id="dribbling" min="0" max="100" value="" class="input-range">
+                </div>
+                  <div class="range-field">
+                  <label for="defending">Defending ( <span class="progressValues">50</span> )</label>
+                  <input type="range" id="defending" min="0" max="100" value="" class="input-range">
+               </div>
+               <div class="range-field">
+                <label for="physical">Physical ( <span class="progressValues">50</span> )</label>
+                <input type="range" id="physical" min="0" max="100" value="" class="input-range">
+              </div>
+              <p id="errortext" style="color: red;"></p>
+
+                       </div>
+                       <div id="gk" class="all-ranges show ">
+                        <div class="range-field">
+                              <label for="rating">Rating ( <span class="ratingValue">50</span> )</label>
+                              <input type="range" id="ratingRange" min="10" max="99" value="" class="input-range">
+                        </div>
+                        <div class="range-field">
+                          <label for="diving">diving ( <span class="ratingValue">50</span> )</label>
+                          <input type="range" id="diving" min="0" max="100" value="" class="input-range">
+                      </div>
+                       <div class="range-field">
+                        <label for="kicking">kicking ( <span class="ratingValue">50</span> )</label>
+                        <input type="range" id="kicking" min="0" max="100" value="" class="input-range">
+                      </div>  
+                      <div class="range-field">
+                        <label for="reflexes">reflexes ( <span class="ratingValue">50</span> )</label>
+                        <input type="range" id="reflexes" min="0" max="100" value="" class="input-range">
+                     </div>
+                     <div class="range-field">
+                      <label for="speed">speed ( <span class="ratingValue">50</span> )</label>
+                     <input type="range" id="speed" min="0" max="100" value="" class="input-range">
                     </div>
-            
-                    <div class="form-group">
-                        <input type="text" id="position" name="position" placeholder="Position (e.g., RW)" >
-                        <input type="text" id="nationality" name="nationality" placeholder="Nationality" >
-                    </div>
-            
-                    <div class="form-group">
-                        <input type="url" id="flag" name="flag" placeholder="Flag URL" >
-                        <input type="text" id="club" name="club" placeholder="Club" >
-                    </div>
-            
-                    <div class="form-group">
-                        <input type="url" id="club-logo" name="club-logo" placeholder="Club Logo URL" >
-                    </div>
-            
-                    <div class="ratings-container">
-                        <input type="number" id="rating" name="rating" placeholder="Rating" >
-                        <input type="number" id="pace" name="pace" placeholder="Pace" >
-                        <input type="number" id="shooting" name="shooting" placeholder="Shooting" >
-                        <input type="number" id="passing" name="passing" placeholder="Passing" >
-                        <input type="number" id="dribbling" name="dribbling" placeholder="Dribbling" >
-                        <input type="number" id="defending" name="defending" placeholder="Defending" >
-                        <input type="number" id="physical" name="physical" placeholder="Physical" >
-                    </div>
-                   
-                    <div class="form-footer">
-                        <button type="button" class="submit-btn">Add Player</button>
-                    </div>
-                </form>
-            </div>
-            
-            
-          </div>
+                    <div class="range-field">
+                      <label for="positioning">positioning ( <span class="ratingValue">50</span> )</label>
+                      <input type="range" id="positioning" min="0" max="100" value="" class="input-range">
+                   </div>
+                   <div class="range-field">
+                    <label for="handling">handling ( <span class="ratingValue">50</span> )</label>
+                    <input type="range" id="handling" min="0" max="100" value="" class="input-range">
+                  </div>
+                 
+    
+                           </div>
+                            <button class="submit-btn" onclick="AddPlayer(event)">Add Player</button>
+                        </div>
+                 </div>
+                </div>
+            </form>
+        </div>
+        
             
         </main>
     </section>
+    <script src="
+    https://cdn.jsdelivr.net/npm/tom-select@2.4.1/dist/js/tom-select.complete.min.js
+    "></script>
     <script src="./assets/js/script.js"></script>
+   <!--  <script src="./assets/js/cleancode.js"></script>  -->
+    <script src="./assets/js/dataincombo.js"></script>
 </body>
 </html>

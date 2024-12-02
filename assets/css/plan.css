@@ -1,0 +1,136 @@
+/* Position 4 3 3 */
+.formation-433 #player1 {
+    position:absolute;
+    top: 2%;
+    left: 15.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player2 {
+    position:absolute;
+    top: 1%;
+    left: 45%;
+    transition: all 0.3s;
+  }
+  .formation-433  #player3 {
+    position:absolute;
+    top: 2%;
+    left: 75.5%;
+    transition: all 0.3s;
+  }
+  .formation-433  #player4 {
+    position:absolute;
+    top: 32%;
+    left: 20.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player5 {
+    position:absolute;
+    top: 34%;
+    left: 45%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player6 {
+    position:absolute;
+    top: 32%;
+    left: 70.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player7 {
+    position:absolute;
+    top: 58%;
+    left: 7.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player8 {
+    position:absolute;
+    top: 62%;
+    left: 25.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player9 {
+    position:absolute;
+    top: 62%;
+    left: 60.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player10 {
+    position:absolute;
+    top: 58%;
+    left: 80.5%;
+    transition: all 0.3s;
+  }
+  .formation-433 #player11 {
+    position:absolute;
+    left: 45%;
+    top: 75%;
+    transition: all 0.3s;
+  }
+  /* 442 Positionment */
+  .formation-442 #player1 {
+    position:absolute;
+    top: 1%;
+    left: 30.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player2 {
+    position:absolute;
+    top: 1%;
+    left: 56.5%;
+    transition: all 0.3s;
+  } 
+  .formation-442 #player3 {
+    position:absolute;
+    top: 25%;
+    left: 1%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player4 {
+    position:absolute;
+    top: 30%;
+    left: 25.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player5 {
+    position:absolute;
+    top: 30%;
+    left: 60.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player6 {
+    position:absolute;
+    top: 25%;
+    left: 83.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player7 {
+    position:absolute;
+    top: 58%;
+    left: 7.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player8 {
+    position:absolute;
+    top: 62%;
+    left: 25.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player9 {
+    position:absolute;
+    top: 62%;
+    left: 60.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player10 {
+    position:absolute;
+    top: 58%;
+    left: 80.5%;
+    transition: all 0.3s;
+  }
+  .formation-442 #player11 {
+    position:absolute;
+    left: 45%;
+    top: 75%;
+    transition: all 0.3s;
+  } 
+  /*-----------------------------------------*/
+  
